@@ -4,7 +4,7 @@ import Hello from "./Welcom"
 import Header from "./Header"
 import Footer from "./Footer"
 import { BrowserRouter } from 'react-router-dom'
-//import Projects from "./Projects"
+import Game from "./Game"
 import About from "./About"
 import { Switch, Route } from 'react-router-dom'
 
@@ -17,6 +17,7 @@ const App = () => {
         <Switch>
         <Route exact path='/' component={Hello}></Route>
         <Route exact path='/about' component={About}></Route>
+        <Route exact path='/game' component={Game}></Route>
       </Switch> 
        <Footer />
       </div >
