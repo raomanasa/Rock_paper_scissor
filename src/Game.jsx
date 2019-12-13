@@ -12,9 +12,9 @@ class Game extends React.Component {
                     <div class="column">
                         <h1 className="ui header">Press any button!</h1> 
                         <BrowserRouter>
-                        <button> <Link to="/game/rock">Rock</Link></button>
-                        <button> <Link to="/game/paper">Paper</Link></button>
-                        <button> <Link to="/game/scissor">Scissor</Link></button>
+                        <button class="ui secondary button"> <Link to="/game/rock">Rock</Link></button>
+                        <button class="ui secondary button"> <Link to="/game/paper">Paper</Link></button>
+                        <button class="ui secondary button"> <Link to="/game/scissor">Scissor</Link></button>
                         <Switch>
                             <Route path="/game/rock"><Check select="rock"/></Route>
                             <Route path="/game/paper"><Check select="paper" /></Route>
