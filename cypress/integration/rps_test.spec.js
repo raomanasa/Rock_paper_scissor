@@ -30,5 +30,21 @@ describe("Visitor can see landing page ", () => {
         .and("contain","Rock vs Scissors -> Rocks wins!")
         .and("contain","Paper vs Scissors -> Scissors wins!");
     });
-    
+    it("visitor can navigate 'Lets Play!' and its content", () => {
+        cy.visit("/game");
+        cy.contains("Press any button!");
+        cy.get("nav")
+        .should("contain", "Rock")     
+        .and("contain", "Paper")     
+        .and("contain", "Scissor");
+        cy.get("button").within(() => {      
+            cy.contains("Rock").click();      
+            cy.url().should("contain", "rock");  
+            cy.contains("Paper").click();      
+            cy.url().should("contain", "paper");      
+            cy.contains("Scissor").click(); 
+            cy.url().should("contain", "scissor"); 
+        });
+    });
+
 });
