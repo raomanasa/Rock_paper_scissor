@@ -8,5 +8,17 @@ describe("Visitor can see landing page ", () => {
         cy.get(".main.container")      
         .should("contain", "WELCOME TO THE GAME!"); 
     });
-    
+    it("visitor can navigate using the header", () => {    
+        cy.visit("/");    
+        cy.get("nav").within(() => {      
+            cy.contains("About Game").click();      
+            cy.url().should("contain", "about");      
+            cy.contains("Lets Play!").click();      
+            cy.url().should("contain", "game");      
+            cy.contains("Rock_Paper_Scissor").click();      
+            cy.url()        
+            .should("not.contain", "about")        
+            .and("not.contain", "game");
+        });
+    });
 });
