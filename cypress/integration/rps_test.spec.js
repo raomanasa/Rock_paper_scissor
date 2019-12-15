@@ -46,5 +46,7 @@ describe("Visitor can see landing page ", () => {
             cy.url().should("contain", "scissor"); 
         });
     });
+    
+        
+    });
 
-});
