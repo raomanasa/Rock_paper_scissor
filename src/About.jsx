@@ -9,7 +9,7 @@ const About = () => {
                 </div>
                 <div class="column">
                     <h1 className="ui header">About Game</h1>
-                    <p>Rule of the game!</p>
+                    <p id="rule0">Rule of the game!</p>
                     <p>Rock vs Paper -> Paper wins! </p>
                     <p>Rock vs Scissors -> Rocks wins!</p>
                     <p>Paper vs Scissors -> Scissors wins! </p>

@@ -21,4 +21,14 @@ describe("Visitor can see landing page ", () => {
             .and("not.contain", "game");
         });
     });
+    it("visitor can navigate 'About Game' and its content", () => {
+        cy.visit("/about")
+        cy.get("div")
+        .should('contain', 'About Game')
+        .and("contain","Rule of the game!")
+        .and("contain","Rock vs Paper -> Paper wins!")
+        .and("contain","Rock vs Scissors -> Rocks wins!")
+        .and("contain","Paper vs Scissors -> Scissors wins!");
+    });
+    
 });
